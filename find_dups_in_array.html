@@ -1,0 +1,12 @@
+<!-- Find the dublicates in an array -->
+
+<script>
+  const array = [1, 2, 3, 4, 5, 1, 2];
+  const dubpliArray = array.filter(
+    (ele, index) => array.indexOf(ele) !== index
+  );
+  console.log({ dubpliArray });
+</script>
+
+<!-- Learning -->
+<!-- indexOf method returns the first index of element found in an array -->
