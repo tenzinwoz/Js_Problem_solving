@@ -1,0 +1,29 @@
+<!-- Find min and max number in an array -->
+<script>
+  const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  // Inbuild JS method
+  console.log(Math.max(...array));
+  console.log(Math.min(...array));
+
+  const maxValue = array.reduce((prev, current) =>
+    prev > current ? prev : current
+  );
+  const minValue = array.reduce((prev, current) =>
+    prev < current ? prev : current
+  );
+  console.log({ maxValue, minValue });
+
+  //   Best and most efficient way
+  let forLoopMax = array[0];
+  let forLoopMin = array[0];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > forLoopMax) {
+      forLoopMax = array[i];
+    }
+    if (array[i] < forLoopMin) {
+      forLoopMin = array[i];
+    }
+  }
+  console.log({ forLoopMax, forLoopMin });
+</script>
